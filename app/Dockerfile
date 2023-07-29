@@ -5,7 +5,7 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 
 # Add the current directory contents into the container at /app
-ADD ./app /app
+ADD . /app
 
 # Run example.py when the container launches
 CMD ["python", "./example.py"]
