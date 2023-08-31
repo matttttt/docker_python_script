@@ -1,3 +1,3 @@
-# pythontest
+# docker_python_script
 
-just testing
+just a basic docker setup to run a example python script
