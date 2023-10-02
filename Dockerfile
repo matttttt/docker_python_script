@@ -7,8 +7,5 @@ WORKDIR /app
 # Add the current directory contents into the container at /app
 ADD . /app
 
-# Install dependencies
-RUN pip install -r requirements.txt
-
 # Run example.py when the container launches
 CMD ["python", "./example.py"]
