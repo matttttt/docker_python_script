@@ -7,5 +7,11 @@ WORKDIR /app
 # Add the current directory contents into the container at /app
 ADD . /app
 
-# Run example.py when the container launches
-CMD ["python", "./example.py"]
+# Copy the custom entry point script into the container
+COPY entrypoint.sh /app/entrypoint.sh
+
+# Make the entry point script executable
+RUN chmod +x /app/entrypoint.sh
+
+# Set the entry point to the custom script
+ENTRYPOINT ["/app/entrypoint.sh"]
